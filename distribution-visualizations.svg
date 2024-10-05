@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="white"/>
+  
+  <!-- Main Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold">Statistical Distributions</text>
+  <text x="200" y="60" text-anchor="middle" font-size="18">Skewness</text>
+  <text x="600" y="60" text-anchor="middle" font-size="18">Kurtosis</text>
+  
+  <!-- Skewness Animation -->
+  <!-- Y-axis line for skewness -->
+  <line x1="50" y1="80" x2="50" y2="200" stroke="#666" stroke-width="1"/>
+  
+  <path id="skewPath" fill="none" stroke="#1f77b4" stroke-width="3">
+    <animate 
+      attributeName="d"
+      dur="8s"
+      repeatCount="indefinite"
+      values="
+        M 50,200 C 50,200 100,120 150,160 C 200,200 220,220 250,180;
+        M 50,200 C 50,200 100,160 150,160 C 200,160 250,160 300,200;
+        M 50,200 C 50,200 100,220 150,160 C 200,100 220,120 250,180;
+        M 50,200 C 50,200 100,160 150,160 C 200,160 250,160 300,200;
+        M 50,200 C 50,200 100,120 150,160 C 200,200 220,220 250,180"
+    />
+  </path>
+  <text x="50" y="220" font-size="14">Negative Skew</text>
+  <text x="300" y="220" font-size="14" text-anchor="end">Positive Skew</text>
+  
+  <!-- Kurtosis Animation - Single Normal Curve -->
+  <text x="420" y="85" font-size="14" text-anchor="end">High (Leptokurtic)</text>
+  <text x="420" y="200" font-size="14" text-anchor="end">Low (Platykurtic)</text>
+  <!-- Y-axis line for kurtosis -->
+  <line x1="450" y1="80" x2="450" y2="200" stroke="#666" stroke-width="1"/>
+  
+  <path id="kurtosisPath" fill="none" stroke="#9467bd" stroke-width="3">
+    <animate 
+      attributeName="d"
+      dur="8s"
+      repeatCount="indefinite"
+      values="
+        M 450,200 C 450,200 500,180 575,180 C 650,180 700,200 700,200;
+        M 450,200 C 450,200 500,160 575,160 C 650,160 700,200 700,200;
+        M 450,200 C 450,200 500,120 575,120 C 650,120 700,200 700,200;
+        M 450,200 C 450,200 500,160 575,160 C 650,160 700,200 700,200;
+        M 450,200 C 450,200 500,180 575,180 C 650,180 700,200 700,200"
+    />
+  </path>
+
+  <!-- X-axis lines -->
+  <line x1="50" y1="200" x2="300" y2="200" stroke="#666" stroke-width="1"/>
+  <line x1="450" y1="200" x2="700" y2="200" stroke="#666" stroke-width="1"/>
+  
+  <!-- Explanatory text -->
+  <text x="50" y="260" font-size="14">Skewness shows how the distribution's</text>
+  <text x="50" y="280" font-size="14">asymmetry changes from left-skewed</text>
+  <text x="50" y="300" font-size="14">to right-skewed.</text>
+  
+  <text x="450" y="260" font-size="14">Kurtosis shows the change in the</text>
+  <text x="450" y="280" font-size="14">"peakedness" of a normal distribution,</text>
+  <text x="450" y="300" font-size="14">from flat (platykurtic) to peaked (leptokurtic).</text>
+</svg>
